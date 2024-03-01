@@ -1,4 +1,4 @@
-
+//仅供学习使用
 window = global
 self = window
 top=window
