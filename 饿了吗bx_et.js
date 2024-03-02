@@ -119,14 +119,7 @@ canvas={
                             }
                         },
                         getParameter:function getParameter(val){
-                            if(val===37445){
-                                return "Google Inc. (Intel)"
-                            }else if(val===37446){
-                                return "ANGLE (Intel, Intel(R) UHD Graphics (0x00009BC4) Direct3D11 vs_5_0 ps_5_0, D3D11)"
-                            }
-                        },
-                        loseContext:function loseContext(){console.log('loseContext')}
-                    }
+                           
                 }
                 if(tag==='2d'){
                     return {
@@ -211,24 +204,6 @@ window.WeakMap=function WeakMap(){
 }
 window.toString=function toString(){
     return '[object Window]'
-}
-opt = Object.prototype.toString
-Object.prototype.toString = function toString() {
-    temp = opt.apply(this, arguments)
-    console.log('Object.prototype.toString', temp)
-    if (temp === '[object global]' || temp === '[object Window]') {
-        return '[object Window]'
-    }
-    return temp
-}
-fpt = Function.prototype.toString
-Function.prototype.toString = function toString() {
-    temp = fpt.apply(this, arguments)
-    console.log('Function.prototype.toString',this.name)
-    if (this.name === 'Window') {
-        return 'function Window() { [native code] }'
-    }
-    return temp
 }
 document.querySelector=function querySelector(){}
 history={
