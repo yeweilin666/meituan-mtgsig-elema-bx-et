@@ -107,20 +107,7 @@ canvas={
             getContext: function getContext(tag) {
                 console.log('getContext', arguments)
                 if (tag === 'webgl') {
-                    return {
-                        drawingBufferColorSpace: "srgb",
-                        drawingBufferHeight: 150,
-                        drawingBufferWidth: 300,
-                        unpackColorSpace: "srgb",
-                        getExtension:function getExtension(val){
-                            console.log('getExtension',val)
-                            if(val==="WEBGL_lose_context"){
-                                return {}
-                            }
-                        },
-                        getParameter:function getParameter(val){
-                           
-                }
+                    return {}
                 if(tag==='2d'){
                     return {
                        "fillRect":function fillRect(a,b,c,d){},
