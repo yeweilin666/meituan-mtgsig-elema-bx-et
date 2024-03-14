@@ -4706,9 +4706,4 @@ function a4No(Q) {
 }
 
 
-function getW_tsfp(k){
-    return  _j[a4x(0x33f, 'GKl%')](_Y, _j[a4x(0x50d, 'i#b%')], _j[a4x(0x529, 'i#b%')](btoa, _j[a4x(0x2d1, '*g6b')](_I, window[a4x(0x634, 'HfiN')][a4x(0x7dc, 'wJEf')], _j[a4x(0xad0, ')A06')](_L, K[0x1]))), 0x1),
-      (K[0x1][a4x(0xa86, '[AQ(')]('/') || K[0x1][a4x(0x307, 'jjpA')](window[a4x(0x559, ']tIA')][a4x(0x8a9, 'i#b%')]) || _j[a4x(0x5f1, 'SHQP')](K[0x1][a4x(0x324, 'k)dS')]('.')[a4x(0x2eb, 'Fk52')], 0x3)) && (_j[a4x(0x493, 'X#Ri')](K[0x1][a4x(0x99b, 'SHQP')]('?'), 0x0) ? K[0x1] += _j[a4x(0x5db, '2auD')](_j[a4x(0x8a8, '@!ca')], _j[a4x(0x67f, 'Fk52')](encodeURIComponent, _j[a4x(0x5ff, 'X#Ri')](btoa, _j[a4x(0x99f, '6KP[')](_I, window[a4x(0x930, 'u%IR')][a4x(0x158, 'SHQP')], _j[a4x(0x781, ')A06')](_L, K[0x1], !0x1))))) : K[0x1] += _j[a4x(0x8c7, 'GKl%')](_j[a4x(0x44b, 'MWcV')], _j[MU(0x7a9, '2x*L')](encodeURIComponent, _j[a4x(0x777, 'X#Ri')](btoa, _j[a4x(0x865, 'gUJ9')](_I, window[a4x(0xa89, 'rCkY')][a4x(0x8b1, 'NiJL')], j[a4x(0x862, 'gjEj')](_L, K[0x1], !0x1))))))
-}
-url=getW_tsfp()
-console.log(url,url.length)
+
