@@ -23346,9 +23346,5 @@ screen.width=1536
                 }
             }
     }
-    var m = [];
-    m.unshift([]);
-    var A = [], S = [], j = 0, x = {}, E = new Date, y = +E, R = [], O = self, _ = O.addEventListener, D = !_, M = !D, P = document.getElementsByTagName("head"), T = P[0], z = navigator.userAgent, B = new RegExp("^(\\d+\\.)*\\d+$"), L = {}, I = 0, N = 0, W = 0, U, V, q, H = 0;
-    w(1)
 }();
 
