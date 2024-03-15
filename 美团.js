@@ -7880,28 +7880,7 @@ window.H5guard.init({
 // })
 function getMtgsig(){
      ttt=Date.now()
-  data={
-    "url": "https://i.waimai.meituan.com/tsp/open/openh5/channel/shopList?set_name=&region_id=&_=1710477349566&yodaReady=h5&csecplatform=4&csecversion=2.4.0",
-    "method": "POST",
-    "headers": {
-        "Accept": "application/json",
-        "Content-Type": "application/x-www-form-urlencoded"
-    },
-    "openArg": [
-        "POST",
-        "https://i.waimai.meituan.com/tsp/open/openh5/channel/shopList?set_name=&region_id=&_=1710477349566&yodaReady=h5&csecplatform=4&csecversion=2.4.0",
-        true,
-        null,
-        null
-    ],
-    "signType": 1,
-    "oriUrl": "https://i.waimai.meituan.com/tsp/open/openh5/channel/shopList?set_name=&region_id=&_=1710477349566",
-    "SCaApp": false,
-    "openHookedCount": 1,
-    "isRaptor": false,
-    "sendHookedCount": 1,
-    "data": "optimus_code=10&optimus_risk_level=71&pageSize=20&page_index=0&offset=0&first_category_type=910&navigate_type=910&content_personalized_switch=0&sort_type=&slider_select_data=%5B%5D&activity_filter_codes=&second_category_type=&wm_latitude=23095901&wm_longitude=113469453&wmUuidDeregistration=0&wmUserIdDeregistration=0&openh5_uuid=A077BF6B3FAAF4CDEF8FE3DE2526172A5518D58267EB67FB459BCB2824CE45BC&uuid=A077BF6B3FAAF4CDEF8FE3DE2526172A5518D58267EB67FB459BCB2824CE45BC"
-}
+  data
 window.H5guard.init({
     xhrHook: true,//true为开启 false为关闭
     fetchHook: true,//true为开启 false为关闭
