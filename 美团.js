@@ -57,19 +57,7 @@ window.Notification = function Notification() {
 };
 this.func_set_natvie(Notification);
 location ={
-    "ancestorOrigins": {},
-    "href": "https://h5.waimai.meituan.com/waimai/mindex/kingkong?navigateType=910&title=%E7%BE%8E%E9%A3%9F&index=1&resource_id=10634",
-    "origin": "https://h5.waimai.meituan.com",
-    "protocol": "https:",
-    "host": "h5.waimai.meituan.com",
-    "hostname": "h5.waimai.meituan.com",
-    "port": "",
-    "pathname": "/waimai/mindex/kingkong",
-    "search": "?navigateType=910&title=%E7%BE%8E%E9%A3%9F&index=1&resource_id=10634",
-    "hash": "",
-    toString:function toString(){
-        return 'https://h5.waimai.meituan.com/waimai/mindex/kingkong?navigateType=910&title=%E7%BE%8E%E9%A3%9F&index=1&resource_id=10634'
-    }
+  
 }
 okeys=Object.keys
 Object.keys=function keys() {
@@ -268,8 +256,7 @@ window.RTCPeerConnection = function RTCPeerConnection() {
         createOffer: function createOffer() {
             return new Promise((a, b) => {
                 a({
-                    sdp: "v=0\r\no=- 3694226644443006051 3 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE 1\r\na=extmap-allow-mixed\r\na=msid-semantic: WMS\r\nm=application 9 UDP/DTLS/SCTP webrtc-datachannel\r\nc=IN IP4 0.0.0.0\r\na=ice-ufrag:gy0Z\r\na=ice-pwd:c7k4JVmD47hhOMEpxpRhp7oS\r\na=ice-options:trickle\r\na=fingerprint:sha-256 02:96:9E:00:71:4B:56:77:57:69:E1:DD:90:9C:6E:5B:E1:54:92:B9:EF:69:5C:FC:92:97:3C:86:0A:0D:F6:A7\r\na=setup:actpass\r\na=mid:1\r\na=sctp-port:5000\r\na=max-message-size:262144\r\n",
-                    type: "offer"
+                
                 })
             })
         },
@@ -360,9 +347,8 @@ document.createElement = function createElement(tagName) {
             },
             'style': {},
             toDataURL: function toDataURL() {
-                return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAphJREFUSEu1l0trFEEQgL8Wgs+DB11fiCJqDBowrJ7E9SIoCDl4ycGTmGgUPQleIpJIyA9QMBsMCKIHQQQJggji65awGPAg+CBeFIkXQYVADm3XPLIzk+nZ3p3ZglmY7ar6urq7qmsUWmtEfkzAtUF44L25ywzQV4W5C+42gPLAw2MwMgS3gCsN7G3+a4A8jqKYr2pKg776NHC4RbCY3QcW3MiKPjSPAuU5YGcO8Ffgpc1+Ihjwl0wB/h6L/AXW5gCL6Svgc5qPLPBWOWSB0TagBzgFnAM6YhO2z+4P8BhYzA4gHrFNdxMwCvQDLof3GfC9CHDoYz9wxOHwTO+F2auJWcpS12ftFnGU5QL/BryI7ynkBcskKsC+jMj/AQ9lPAorArzanNwzwAoL3AO3I2LhHQW6LGBvqZNjRUQsPncAJyxgqYCz7QJLoZHlTpOldCp6j0PY+RSqV0Cuw+J2ezodT5ZMhxSNqaSBrSUzsCwD5TzgtKXOvCR8oPf4l0RVQ3AtNhNx2uGyXYsbgG6TYnvqAAXSgYyZqj7UDHZ5OqU1AiWgMz3tAnBYZRwjl8IhDYPcZnKpvgHkUElhWWUK1hbTFOwCBGyRCFg0PpifYeBJ4+jXAAfNCT7QWDVNIwEOVST7Bf7WdHIfgflgoASVLhitQM9pWCfk1sQCtji7DNxuDZS0UifX64Xnv1mZ6S7aCBTDnVIa3dE5Qu3TDN28j3QOttYnP3gKpXqlEfBF6zvAxfx+Mz2Mo9Ql0aiDfbi0dZNtgg+g1JLvONiHbwZuFBj9uGkZbqLUz2hAy8H1pd9tdnwAOAtsbHIVfpkb+x5wF6W+hLb9NcqTZf9Dxw6OkrSWLusYcAjotUziafD19Bql3iV1BCr/heD/KPanW6Ke3U8AAAAASUVORK5CYII='
+                return ''
             }
-
         }
     } else if (tagName === 'div') {
         return {}
@@ -412,7 +398,7 @@ document.getElementsByTagName = function getElementsByTagName(tagName) {
             },
             {
                 getAttribute: function getAttribute() {
-                    return "//s0.meituan.net/mxx/yoda/yoda.seed.js"
+                    return ""
                 }
             },
             {
@@ -432,7 +418,7 @@ document.getElementsByTagName = function getElementsByTagName(tagName) {
             },
             {
                 'src': 'https://appsec-mobile.meituan.com/h5guard/H5guard.js', getAttribute: function getAttribute() {
-                    return 'https://appsec-mobile.meituan.com/h5guard/H5guard.js'
+                    return ''
                 }
             },
             {
@@ -7847,44 +7833,16 @@ proxy_array = ['window', 'Window', 'document', 'HTMLElement', 'n', 'l', 'Documen
 window.H5guard.init({
     xhrHook: true,//true为开启 false为关闭
     fetchHook: true,//true为开启 false为关闭
-    domains: ['i.waimai.meituan.com', 'i.waimai.st.meituan.com', 'i.c.waimai.test.sankuai.com'],
+    domains: [],
     geo: false
 });
-// window.H5guard.sign(
-//
-//     {
-//     "url": "https://i.waimai.meituan.com/tsp/open/openh5/channel/shopList?set_name=&region_id=&_=1710477349566&yodaReady=h5&csecplatform=4&csecversion=2.4.0",
-//     "method": "POST",
-//     "headers": {
-//         "Accept": "application/json",
-//         "Content-Type": "application/x-www-form-urlencoded"
-//     },
-//     "openArg": [
-//         "POST",
-//         "https://i.waimai.meituan.com/tsp/open/openh5/channel/shopList?set_name=&region_id=&_=1710477349566&yodaReady=h5&csecplatform=4&csecversion=2.4.0",
-//         true,
-//         null,
-//         null
-//     ],
-//     "signType": 1,
-//     "oriUrl": "https://i.waimai.meituan.com/tsp/open/openh5/channel/shopList?set_name=&region_id=&_=1710477349566",
-//     "SCaApp": false,
-//     "openHookedCount": 1,
-//     "isRaptor": false,
-//     "sendHookedCount": 1,
-//     "data": "optimus_code=10&optimus_risk_level=71&pageSize=20&page_index=0&offset=0&first_category_type=910&navigate_type=910&content_personalized_switch=0&sort_type=&slider_select_data=%5B%5D&activity_filter_codes=&second_category_type=&wm_latitude=23095901&wm_longitude=113469453&wmUuidDeregistration=0&wmUserIdDeregistration=0&openh5_uuid=A077BF6B3FAAF4CDEF8FE3DE2526172A5518D58267EB67FB459BCB2824CE45BC&uuid=A077BF6B3FAAF4CDEF8FE3DE2526172A5518D58267EB67FB459BCB2824CE45BC"
-// }
-// ).then(function (res) {
-//     // console.log(res.headers.mtgsig.toString())
-//     // console.log(res.headers.mtgsig.length);
-// })
 function getMtgsig(){
      ttt=Date.now()
   data
 window.H5guard.init({
     xhrHook: true,//true为开启 false为关闭
     fetchHook: true,//true为开启 false为关闭
-    domains: ['i.waimai.meituan.com', 'i.waimai.st.meituan.com', 'i.c.waimai.test.sankuai.com'],
+    domains: [],
     geo: false
 });
 window.H5guard.sign(data).then(function (res) {
