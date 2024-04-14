@@ -108,26 +108,7 @@ Navigator.toString = function toString() {
     return 'function Navigator() { [native code] }'
 };
 this.func_set_natvie(Navigator.toString);
-navigator = {
-    appCodeName: "Mozilla",
-    appName: "Netscape",
-    appVersion: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0',
-    connection: {downlink: 10, effectiveType: "4g", onchange: null, rtt: 50, saveData: false},
-    cookieEnabled: true,
-    deviceMemory: 8,
-    hardwareConcurrency: 8,
-    language: "zh-CN",
-    languages: ["zh-CN"],
-    product: "Gecko",
-    productSub: "20030107",
-    scheduling: {},
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0',
-    vendor: "Google Inc.",
-    vendorSub: "",
-    webdriver: false,
-    'platform': 'win32',
-    'webkitPersistentStorage': {}
-}
+navigator = {}
 navigator.__proto__ = Navigator.prototype
 window.self = window
 window.top = window
@@ -195,21 +176,7 @@ window.indexedDB = {}
 window._phantom = undefined
 window.phantom = undefined
 window.callPhantom = undefined
-window.chrome = {
-    "app": {
-        "isInstalled": false,
-        "InstallState": {
-            "DISABLED": "disabled",
-            "INSTALLED": "installed",
-            "NOT_INSTALLED": "not_installed"
-        },
-        "RunningState": {
-            "CANNOT_RUN": "cannot_run",
-            "READY_TO_RUN": "ready_to_run",
-            "RUNNING": "running"
-        }
-    }
-}
+
 navigator.plugins = [{name: "PDF Viewer"}, {name: "Chrome PDF Viewer"}, {name: "Chromium PDF Viewer"},
     {name: "Microsoft Edge PDF Viewer"}, {name: "WebKit built-in PDF"}]
 oph = Object.prototype.hasOwnProperty
@@ -262,43 +229,7 @@ document.createElement = function createElement(tagName) {
         return {
             getContext: function getContext(tag) {
                 console.log('getContext', arguments)
-                if (tag === 'webgl') {
-                    return {
-                        drawingBufferColorSpace: "srgb",
-                        drawingBufferHeight: 150,
-                        drawingBufferWidth: 300,
-                        unpackColorSpace: "srgb",
-                        RENDERER: 7937,
-                        VENDOR: 7936,
-                        VERSION: 7938,
-                        getExtension: function getExtension(tag) {
-                            console.log('webgl.getExtension', arguments)
-                            if (tag === 'WEBGL_debug_renderer_info') {
-                                return {
-                                    UNMASKED_RENDERER_WEBGL: 37446,
-                                    UNMASKED_VENDOR_WEBGL: 37445,
-                                }
-                            }
-                        },
-                        getParameter: function getParameter(val) {
-                            console.log('webgl.getParameter', arguments)
-                            if (val === 37445) {
-                                return 'Google Inc. (Intel)'
-                            } else if (val === 37446) {
-                                return 'ANGLE (Intel, Intel(R) UHD Graphics (0x00009BC4) Direct3D11 vs_5_0 ps_5_0, D3D11)'
-                            } else if (val === 7936) {
-                                return 'WebKit'
-                            } else if (val === 7937) {
-                                return 'WebKit WebGL'
-                            } else if (val === 7938) {
-                                return 'WebGL 1.0 (OpenGL ES 2.0 Chromium)'
-                            }
-                        },
-                        createShader:function createShader(){
-                            console.log('webgl.createShader',arguments)
-                        }
-                    }
-                } else if (tag === '2d') {
+                  if (tag === '2d') {
                     return {
                         rect: function rect(a, b, c) {
                         },
@@ -327,79 +258,12 @@ document.createElement = function createElement(tagName) {
     } else if (tagName === 'div') {
         return {}
     }else if(tagName==='style'){
-
-        return {
-            style:{
-            },
-            setAttribute:function setAttribute(key,value){
-                   styles[key]=value
-                    this.outerHTML= `<style ${key}=${value}></style>`
-                },
-            getAttribute:function getAttribute(key){
-                 return styles[key]
-                },
-            appendChild:function appendChild(text){
-
-            }
-        }
-    }
+        return {}
 }
 document.getElementsByTagName = function getElementsByTagName(tagName) {
     console.log('document.getElementsByTagName', arguments)
     if (tagName === 'script') {
-        return [
-            {
-                type: 'text/javascript',
-                src: "https://www.dpfile.com/app/owl/static/owl_1.10.0.js",
-                getAttribute: function getAttribute() {
-                    return "https://www.dpfile.com/app/owl/static/owl_1.10.0.js"
-                }
-            },
-            {
-                getAttribute: function getAttribute() {
-                    return null
-                }
-            },
-            {
-                type: 'text/javascript', getAttribute: function getAttribute() {
-                    return null
-                }
-            },
-            {
-                getAttribute: function getAttribute() {
-                    return null
-                }
-            },
-            {
-                getAttribute: function getAttribute() {
-                    return ""
-                }
-            },
-            {
-                getAttribute: function getAttribute() {
-                    return null
-                }
-            },
-            {
-                getAttribute: function getAttribute() {
-                    return null
-                }
-            },
-            {
-                type: 'text/javascript', getAttribute: function getAttribute() {
-                    return null
-                }
-            },
-            {
-                'src': 'https://appsec-mobile.meituan.com/h5guard/H5guard.js', getAttribute: function getAttribute() {
-                    return ''
-                }
-            },
-            {
-                getAttribute: function getAttribute() {
-                    return null
-                }
-            }]
+        return []
     } else if (tagName === 'iframe') {
         return []
     } else if (tagName === 'frame') {
@@ -479,64 +343,6 @@ navigator.permissions = {
     }
 }
 window.length = 0
-window.performance ={
-    "timeOrigin": 1710468937027.3,
-    "timing": {
-        "connectStart": 1710468937061,
-        "navigationStart": 1710468937027,
-        "secureConnectionStart": 0,
-        "fetchStart": 1710468937061,
-        "domContentLoadedEventStart": 1710470001871,
-        "responseStart": 1710468937141,
-        "domInteractive": 1710470001410,
-        "domainLookupEnd": 1710468937061,
-        "responseEnd": 1710468937142,
-        "redirectStart": 0,
-        "requestStart": 1710468937076,
-        "unloadEventEnd": 1710468937147,
-        "unloadEventStart": 1710468937147,
-        "domLoading": 1710468937150,
-        "domComplete": 1710470001998,
-        "domainLookupStart": 1710468937061,
-        "loadEventStart": 1710470001998,
-        "domContentLoadedEventEnd": 1710470001882,
-        "loadEventEnd": 1710470002002,
-        "redirectEnd": 0,
-        "connectEnd": 1710468937061
-    },
-    "navigation": {
-        "type": 1,
-        "redirectCount": 0
-    },
-   timing: {
-    "connectStart": 1710470868581,
-    "navigationStart": 1710470868554,
-    "secureConnectionStart": 0,
-    "fetchStart": 1710470868581,
-    "domContentLoadedEventStart": 0,
-    "responseStart": 1710470868652,
-    "domInteractive": 0,
-    "domainLookupEnd": 1710470868581,
-    "responseEnd": 1710470868655,
-    "redirectStart": 0,
-    "requestStart": 1710470868591,
-    "unloadEventEnd": 1710470868823,
-    "unloadEventStart": 1710470868823,
-    "domLoading": 1710470868826,
-    "domComplete": 0,
-    "domainLookupStart": 1710470868581,
-    "loadEventStart": 0,
-    "domContentLoadedEventEnd": 0,
-    "loadEventEnd": 0,
-    "redirectEnd": 0,
-    "connectEnd": 1710470868581
-},
-    memory:{
-        jsHeapSizeLimit: 4294705152,
-totalJSHeapSize: 111337498,
-usedJSHeapSize: 94676598
-    }
-}
 window.devicePixelRatio = 1.25
 document.body = {
     appendChild: function appendChild() {
@@ -547,21 +353,6 @@ document.body = {
 }
 window.AudioContext = function AudioContext() {
     console.log('window.AudioContext', arguments)
-}
-window.innerHeight = 760
-window.innerWidth = 490
-window.scrollX = 0
-window.scrollY = 0
-window.pageXOffset = 0
-window.pageYOffset = 0
-window.visualViewport = {
-    height: 760,
-    offsetLeft: 0,
-    offsetTop: 0,
-    pageLeft: 0,
-    pageTop: 0,
-    scale: 1,
-    width: 1536,
 }
 window.screenX = 0
 window.screenY = 0
@@ -581,7 +372,6 @@ window.toolbar = {visible: true}
 window.status = ''
 window.frameElement = null
 window.onsearch = null
-window.origin = 'https://h5.waimai.meituan.com'
 window.external = {}
 window.styleMedia = {type: "screen"}
 window.isSecureContext = true
@@ -740,7 +530,6 @@ window.speechSynthesis = {
 window.trustedTypes = {emptyHTML: ""}
 window.caches = {}
 window.Owl = {}
-document.referrer = 'https://verify.meituan.com/'
 navigator.geolocation = {}
 navigator.mimeTypes = {
     "0": {},
@@ -912,38 +701,6 @@ window.onrejectionhandled = null;
 window.onstorage = null;
 window.onunhandledrejection = null;
 window.onunload = null;
-var _he,_LW
-
-// function get_enviroment(proxy_array) {
-//     for (var i = 0; i < proxy_array.length; i++) {
-//         handler = '{\n' +
-//             '    get: function(target, property, receiver) {\n' +
-//             '        console.log("方法:", "get  ", "对象:", ' +
-//             '"' + proxy_array[i] + '" ,' +
-//             '"  属性:", property, ' +
-//             '"  属性类型:", ' + 'typeof property, ' +
-//             // '"  属性值:", ' + 'target[property], ' +
-//             '"  属性值类型:", typeof target[property]);\n' +
-//             '        return target[property];\n' +
-//             '    },\n' +
-//             '    set: function(target, property, value, receiver) {\n' +
-//             '        console.log("方法:", "set  ", "对象:", ' +
-//             '"' + proxy_array[i] + '" ,' +
-//             '"  属性:", property, ' +
-//             '"  属性类型:", ' + 'typeof property, ' +
-//             // '"  属性值:", ' + 'target[property], ' +
-//             '"  属性值类型:", typeof target[property]);\n' +
-//             '        return Reflect.set(...arguments);\n' +
-//             '    }\n' +
-//             '}'
-//         eval('try{\n' + proxy_array[i] + ';\n'
-//             + proxy_array[i] + '=new Proxy(' + proxy_array[i] + ', ' + handler + ')}catch (e) {\n' + proxy_array[i] + '={};\n'
-//             + proxy_array[i] + '=new Proxy(' + proxy_array[i] + ', ' + handler + ')}')
-//     }
-// }
-
-proxy_array = ['window', 'Window', 'document', 'HTMLElement', 'n', 'l', 'Document', 'location', 'Location', 'navigator', 'history', 'screen', 'canvas', 'target']
-// get_enviroment(proxy_array)
 !function (factory) {
     "function" == typeof define && define.amd ? define(factory) : factory()
 }(function () {
