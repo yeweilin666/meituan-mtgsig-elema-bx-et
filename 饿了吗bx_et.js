@@ -7,18 +7,8 @@ window.addEventListener = function addEventListener() {
     console.log('window.addEventListener', arguments)
 }
 document = {}
-document.scripts=[{},{},{}]
-document.currentScript={"dataset":{}}
-document.getElementsByTagName = function getElementsByTagName(tagName) {
-    console.log('getElementsByTagName', arguments)
-    if (tagName === 'head') {
-        return [{}]
-    }else if(tagName==='base'){
-        return [{}]
-    }
-}
+
 navigator = {}
-navigator.userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0"
 window.localStorage = {
     getItem: function (key) {
         return window.localStorage[key] || null;
@@ -54,30 +44,8 @@ location = {
         return location.href
     }
 }
-window.etrprtrt = 0.01
-window.Element = function Element() {
-    console.log('window.Element')
-}
-window.webkitRTCPeerConnection = function webkitRTCPeerConnection() {
-    console.log('window.webkitRTCPeerConnection')
-}
-window.Image = function Image() {
-    console.log('window.Image')
-}
-navigator.platform = 'Win32'
-document.cookie = ''
-document.addEventListener = function addEventListener(val1, val2, val3) {
-    console.log('documnet.addEventListener', arguments)
-    if(val1==='submit'){return;}
-    a={
-"onload": function onload() {
-            console.log('onload', arguments)
-        },
-        defaultPrevented:function defaultPrevented(){},
-        '__sufei_id':""
-    }
-    val2(a)
-}
+
+
 screen = {}
 screen.availWidth = 1536
 window.screenTop=0
@@ -91,37 +59,8 @@ HTMLMediaElement=function HTMLMediaElement(){}
 HTMLCanvasElement.prototype.toDataURL=function toDataURL(){
     throw new TypeError('Illegal invocation')
 }
-Object.defineProperties(HTMLCanvasElement.prototype, {
-    [Symbol.toStringTag]: {
-        value: 'HTMLCanvasElement',
-        configurable: true
-    }
-})
-Object.defineProperties(HTMLMediaElement.prototype, {
-    [Symbol.toStringTag]: {
-        value: 'HTMLMediaElement',
-        configurable: true
-    }
-})
-canvas={
-            getContext: function getContext(tag) {
-                console.log('getContext', arguments)
-                if (tag === 'webgl') {
-                    return {}
-                if(tag==='2d'){
-                    return {
-                       "fillRect":function fillRect(a,b,c,d){},
-                       'fillText':function fillText(a,b,c,d){},
-                    }
-                }
-            },
-            toDataURL: function toDataURL() {
-                return ''
-            },
-            style:{},
-    __proto__:HTMLCanvasElement.prototype
 
-        }
+
 a={href:""}
 // canvas=proxy_(canvas)
 // a=proxy_(a)
@@ -137,15 +76,8 @@ document.createElement = function createElement(tagName) {
         return a
     }
 }
-navigator.appVersion='5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0'
-navigator.vendor='Google Inc.'
-navigator.hardwareConcurrency=8
-navigator.webdriver =false
-navigator.languages=[
-    "zh-CN"
-]
-navigator.language='zh-CN'
-document.readyState='interactive'
+
+
 window.performance={
     "timeOrigin": 1708407536616.6,
     "timing": {
@@ -183,22 +115,7 @@ totalJSHeapSize: 35375035,
 usedJSHeapSize: 32036619,
     }
 }
-window.PerformanceEntry=function PerformanceEntry(){
-    console.log("window.PerformanceEntry")
-}
-window.WeakMap=function WeakMap(){
-    console.log("window.WeakMap")
-}
-window.toString=function toString(){
-    return '[object Window]'
-}
-document.querySelector=function querySelector(){}
-history={
-    length:4
-}
-PointerEvent=function PointerEvent(){
-}
-window.Navigator=function Navigator(){}
+
 navigator.plugins= [
     {name: "PDF Viewer", description: "Portable Document Format", filename: "internal-pdf-viewer"},
     {name: "Chrome PDF Viewer", description: "Portable Document Format", filename: "internal-pdf-viewer"},
@@ -229,12 +146,7 @@ navigator.mimeTypes= [
     {type: 'application/x-java-applet;jpi-version=1.8.0_321', suffixes: '', description: ''},
     {type: 'application/x-java-applet;version=1.1', suffixes: '', description: ''},
 ]
-window.wscreenTop=0
-window.screenLeft=0
-window.outerHeight=834
-window.outerWidth=1536
-screen.height=864
-screen.width=1536
+
 
 
 
