@@ -1,6 +1,4 @@
 
-cl=console.log
-appkey = ""
 const XMLHttpRequest = require('xhr2');
 Window = function Window() {
     throw new TypeError('Illegal constructor')
@@ -61,17 +59,6 @@ window.XMLHttpRequest = function XMLHttpRequest() {
         send: function send() {
         }
     }
-}
-window.onerror = function onerror() {
-    console.log('window.onerror'.arguments)
-}
-window.onappinstalled = null
-window.onpointerrawupdate = null
-window.ondevicemotion = null
-window.ondeviceorientation = null
-window.ondeviceorientationabsolute = null
-window.scrollTo = function scrollTo() {
-    console.log('window.scrollTo'.arguments)
 }
 window.MouseEvent = function MouseEvent() {
     console.log('window.MouseEvent'.arguments)
@@ -185,165 +172,7 @@ Object.prototype.hasOwnProperty = function hasOwnProperty(val) {
         return false
     }
     return oph.apply(this, arguments)
-}
-window.RTCPeerConnection = function RTCPeerConnection() {
-    return {
-        signalingState: "stable",
-        iceConnectionState: "new",
-        iceGatheringState: "new",
-        connectionState: "new",
-        createDataChannel: function createDataChannel() {
-        },
-        createOffer: function createOffer() {
-            return new Promise((a, b) => {
-                a({
-                
-                })
-            })
-        },
-        setLocalDescription: function setLocalDescription() {
-            return new Promise((a, b) => {
-                a({})
-            })
-        }
-    }
-}
-window.webkitRTCPeerConnection = function webkitRTCPeerConnection() {
-    console.log('window.webkitRTCPeerConnection')
-}
-window.OfflineAudioContext = function OfflineAudioContext() {
-    console.log('window.OfflineAudioContext')
-}
-navigator.mediaDevices = {
-    getUserMedia: function getUserMedia() {
-        console.log('navigator.mediaDevices.getUserMedia')
-        return new Promise((a, b) => {
 
-        })
-    }
-}
-styles={}
-document.createElement = function createElement(tagName) {
-    console.log('document.createElement', arguments)
-    if (tagName === 'canvas') {
-        return {
-            getContext: function getContext(tag) {
-                console.log('getContext', arguments)
-                  if (tag === '2d') {
-                    return {
-                        rect: function rect(a, b, c) {
-                        },
-                        fillRect: function fillRect(a, b, c, d) {
-                        },
-                        fillText: function fillText(a, b, c) {
-                        },
-                        arc: function arc(a, b, c, d, e, f) {
-                        },
-                        fill: function fill(a, b, c) {
-                        },
-                        closePath: function closePath() {
-                        },
-                        beginPath: function beginPath() {
-                        }
-                    }
-                } else if (tag === 'experimental-webgl') {
-                    return {}
-                }
-            },
-            'style': {},
-            toDataURL: function toDataURL() {
-                return ''
-            }
-        }
-    } else if (tagName === 'div') {
-        return {}
-    }else if(tagName==='style'){
-        return {}
-}
-document.getElementsByTagName = function getElementsByTagName(tagName) {
-    console.log('document.getElementsByTagName', arguments)
-    if (tagName === 'script') {
-        return []
-    } else if (tagName === 'iframe') {
-        return []
-    } else if (tagName === 'frame') {
-        return []
-    }else if(tagName==='head'){
-        return [{appendChild:function appendChild(){}}]
-    }
-}
-document.createTextNode=function createTextNode(val) {
-    console.log('document.createTextNode', arguments)
-    return {
-        nodeValue: val,
-        toString: function toString() {
-            return val
-        }
-    }
-}
-document.getElementById = function getElementById(val) {
-    console.log('document.getElementById', arguments)
-    if (val == 1) {
-        return {clientHeigh: 48, clientWidth: 26}
-    }
-}
-og = Object.getOwnPropertyDescriptor
-Object.getOwnPropertyDescriptor.toString = function toString() {
-    return 'function getOwnPropertyDescriptor() { [native code] }'
-};
-this.func_set_natvie(Object.getOwnPropertyDescriptor.toString);
-Object.getOwnPropertyDescriptor = function getOwnPropertyDescriptor(val) {
-    console.log('Object.getOwnPropertyDescriptor', val.toString())
-    if (val.toString() === '[object Navigator]') {
-        return undefined
-    } else if (val.toString() === '[object Window]') {
-        return {
-            configurable: false,
-            enumerable: false,
-            value: undefined,
-            writable: false,
-        }
-    }
-    return og.apply(this, arguments)
-};
-this.func_set_natvie(Object.getOwnPropertyDescriptor);
-opt = Object.prototype.toString
-Object.prototype.toString = function toString(val1, val2) {
-    console.log('Object.prototype.toString', this.constructor.name, val1, val2, this.name)
-    if (this.constructor.name === 'Window') {
-        return '[object Window]'
-    } else if (this.constructor.name === 'Navigator') {
-        return '[object Navigator]'
-    }
-    return opt.apply(this, arguments)
-};
-this.func_set_natvie(Object.prototype.toString);
-Window.toString = function toString() {
-    return 'function Window() { [native code] }'
-};
-this.func_set_natvie(Window.toString);
-window.toString = function toString() {
-    return '[object Window]'
-};
-this.func_set_natvie(window.toString);
-navigator.getUserMedia = function getUserMedia() {
-    console.log('navigator.getUserMedia', arguments)
-};
-this.func_set_natvie(navigator.getUserMedia);
-navigator.maxTouchPoints = 0
-navigator.permissions = {
-    query: function query() {
-        return new Promise((resolve, reject) => {
-            resolve({
-                name: "notifications",
-                onchange: null,
-                state: "prompt",
-            });
-        });
-    }
-}
-window.length = 0
-window.devicePixelRatio = 1.25
 document.body = {
     appendChild: function appendChild() {
     },
@@ -375,74 +204,6 @@ window.onsearch = null
 window.external = {}
 window.styleMedia = {type: "screen"}
 window.isSecureContext = true
-window.stop = function stop() {
-}
-window.open = function open() {
-}
-window.alert = function alert() {
-}
-window.confirm = function confirm() {
-}
-window.prompt = function prompt() {
-}
-window.print = function print() {
-}
-window.requestAnimationFrame = function requestAnimationFrame() {
-    console.log('window.requestAnimationFrame', arguments)
-}
-window.cancelAnimationFrame = function cancelAnimationFrame() {
-    conosle.log('window.cancelAnimationFrame', arguments)
-}
-window.captureEvents = function captureEvents() {
-    conosle.log('window.captureEvents', arguments)
-}
-window.releaseEvents = function releaseEvents() {
-    conosle.log('window.releaseEvents', arguments)
-}
-window.requestIdleCallback = function requestIdleCallback() {
-    conosle.log('window.requestIdleCallback', arguments)
-}
-window.cancelIdleCallback = function cancelIdleCallback() {
-    conosle.log('window.cancelIdleCallback ', arguments)
-}
-window.getComputedStyle = function getComputedStyle() {
-    console.log('window.getComputedStyle', arguments)
-    return null
-}
-window.matchMedia = function matchMedia(val) {
-    console.log('window.matchMedia', arguments)
-    if (val === '(color-gamut: p3)') {
-        return {
-            matches: false,
-            media: val,
-            onchange: null,
-        }
-    } else if (val === '(color-gamut: srgb)') {
-        return {
-            matches: true,
-            media: val,
-            onchange: null,
-        }
-    } else if (val === '(color-gamut: rec2020)') {
-        return {
-            matches: false,
-            media: val,
-            onchange: null,
-        }
-    }
-}
-window.moveTo = function moveTo() {
-    console.log('window.moveTo', arguments)
-}
-window.moveBy = function moveBy() {
-    console.log('window.moveBy', arguments)
-}
-window.resizeTo = function resizeTo() {
-    console.log('window.resizeTo', arguments)
-}
-window.resizeBy = function resizeBy() {
-    console.log('window.resizeBy', arguments)
-}
 window.getSelection = function getSelection() {
     return {
         anchorOffset: 0,
@@ -513,28 +274,6 @@ document.addEventListener = function addEventListener(val1, val2, val3) {
 window.createImageBitmap = function createImageBitmap() {
     console.log("window.createImageBitmap", arguments)
 }
-window.outerWidth = 1536
-window.outerHeight = 834
-document.readyState = 'loading'
-document.hidden = false
-document.webkitHidden = false
-window.crypto = {
-    subtle: {}
-}
-window.speechSynthesis = {
-    paused: false,
-    pending: false,
-    speaking: false,
-    onvoiceschanged: null
-}
-window.trustedTypes = {emptyHTML: ""}
-window.caches = {}
-window.Owl = {}
-navigator.geolocation = {}
-navigator.mimeTypes = {
-    "0": {},
-    "1": {}
-}
 navigator.sendBeacon = function sendBeacon() {
     console.log('navigator.sendBeacon', arguments)
 }
@@ -602,105 +341,6 @@ history.pushState = function pushState() {
 history.replaceState = function replaceState() {
     console.log('history.replaceState')
 }
-window.clientInformation = navigator
-window.navigator.doNotTrack = null
-window.onabort = null;
-window.onblur = null;
-window.oncancel = null;
-window.oncanplay = null;
-window.oncanplaythrough = null;
-window.onchange = null;
-window.onclick = null;
-window.onclose = null;
-window.oncontextmenu = null;
-window.oncuechange = null;
-window.ondblclick = null;
-window.ondrag = null;
-window.ondragend = null;
-window.ondragenter = null;
-window.ondragleave = null;
-window.ondragover = null;
-window.ondragstart = null;
-window.ondrop = null;
-window.ondurationchange = null;
-window.onemptied = null;
-window.onended = null;
-window.onerror = null;
-window.onfocus = null;
-window.onformdata = null;
-window.oninput = null;
-window.oninvalid = null;
-window.onkeydown = null;
-window.onkeypress = null;
-window.onkeyup = null;
-window.onload = null;
-window.onloadeddata = null;
-window.onloadedmetadata = null;
-window.onloadstart = null;
-window.onmousedown = null;
-window.onmouseenter = null;
-window.onmouseleave = null;
-window.onmousemove = null;
-window.onmouseout = null;
-window.onmouseover = null;
-window.onmouseup = null;
-window.onmousewheel = null;
-window.onpause = null;
-window.onplay = null;
-window.onplaying = null;
-window.onprogress = null;
-window.onratechange = null;
-window.onreset = null;
-window.onresize = null;
-window.onscroll = null;
-window.onseeked = null;
-window.onseeking = null;
-window.onselect = null;
-window.onstalled = null;
-window.onsubmit = null;
-window.onsuspend = null;
-window.ontimeupdate = null;
-window.ontoggle = null;
-window.onvolumechange = null;
-window.onwaiting = null;
-window.onwebkitanimationend = null;
-window.onwebkitanimationiteration = null;
-window.onwebkitanimationstart = null;
-window.onwebkittransitionend = null;
-window.onwheel = null;
-window.onauxclick = null;
-window.ongotpointercapture = null;
-window.onlostpointercapture = null;
-window.onpointerdown = null;
-window.onpointermove = null;
-window.onpointerup = null;
-window.onpointercancel = null;
-window.onpointerover = null;
-window.onpointerout = null;
-window.onpointerenter = null;
-window.onpointerleave = null;
-window.onselectstart = null;
-window.onselectionchange = null;
-window.onanimationend = null;
-window.onanimationiteration = null;
-window.onanimationstart = null;
-window.ontransitionend = null;
-window.onafterprint = null;
-window.onbeforeprint = null;
-window.onbeforeunload = null;
-window.onhashchange = null;
-window.onlanguagechange = null;
-window.onmessage = null;
-window.onmessageerror = null;
-window.onoffline = null;
-window.ononline = null;
-window.onpagehide = null;
-window.onpageshow = null;
-window.onpopstate = null;
-window.onrejectionhandled = null;
-window.onstorage = null;
-window.onunhandledrejection = null;
-window.onunload = null;
 !function (factory) {
     "function" == typeof define && define.amd ? define(factory) : factory()
 }(function () {
